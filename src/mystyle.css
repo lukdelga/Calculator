@@ -1,0 +1,94 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: linear-gradient(to right, orange, red);
+}
+
+#main-container {
+    display: flex;
+    justify-content: center;
+}
+
+#calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 3.5em);
+    grid-template-rows: minmax(6em, auto) repeat(5, 3em);
+    margin: 20px 50px;
+    text-align: center;
+}
+
+#calculadora > button {
+    background-color: rgba(255, 255, 255, 0.699);
+    outline: none;
+    cursor: pointer;
+    border: 1px solid rgb(5, 134, 173);
+    margin: 0;
+    font-size: 1.3rem;
+}
+
+#calculadora > button:hover {
+    background-color: rgba(255, 255, 255, 0.925);
+}
+
+.span-two {
+    grid-column: span 2;
+}
+
+#visor {
+    text-align: end;
+    background-color: rgba(0, 0, 0, 0.705);
+    grid-column: 1 / -1;
+    color: white;
+    padding: 5px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#currentValue {
+    font-size: 2rem;
+    margin: 5px;
+}
+
+#previousValue {
+    font-size: 1.5rem;
+    margin: 5px;
+}
+
+#hist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 20px 50px;
+}
+
+#expand {
+    text-decoration: none;
+}
+
+#expand:link, #expand:visited, #expand:hover, 
+#expand:focus, #expand:active{
+    color:blue;
+}
+
+#history {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 20%;
+    grid-template-rows: repeat(5, 1fr);
+    padding: 10px;
+    margin: 10px;
+    background-color: rgba(255, 255, 255, 0.85);
+    color: (0, 0, 0, .75);
+    min-width: 600px;
+    min-height: 350px;
+    font-size: 1.2em;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+#hidden {
+    display: none;
+}
